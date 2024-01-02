@@ -1,0 +1,32 @@
+<html>
+
+<head>
+
+    <title>
+        {% block title %}{% endblock  %}
+    </title>
+</head>
+        <body>
+
+            {% include "appbar/searchbar.html" %}
+            <h1>
+                Hola buenas tardes
+            </h1>
+            <p>
+                Son las {{date}}
+            </p>
+            <p>
+                La persona es {{person.name}} {{person.lastname}}
+            </p>
+            <p>
+                {% for item in themes %}
+                <ul>
+                    <li>{{item}}</li>
+                </ul>
+                {% endfor %}
+                
+            </p>
+
+            {% block content %}{% endblock  %}
+        </body>
+</html>
